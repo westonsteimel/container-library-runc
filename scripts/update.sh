@@ -16,7 +16,7 @@ sed -ri \
 git add stable/Dockerfile
 git diff-index --quiet HEAD || git commit --message "updated stable to version ${version}, revision ${revision}"
 
-version="master"
+version="main"
 revision=`curl --silent "https://api.github.com/repos/opencontainers/runc/commits/${version}" | jq .sha | xargs`
 echo "latest edge version: ${version}, revision: ${revision}"
 
